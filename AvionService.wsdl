@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://avion/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://avion/">
+
+    <types>
+        <xsd:schema targetNamespace="http://avion/">
+            <xsd:element name="registrarAvion">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="modelo" type="xsd:string"/>
+                        <xsd:element name="fabricante" type="xsd:string"/>
+                        <xsd:element name="capacidad" type="xsd:int"/>
+                        <xsd:element name="autonomia" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="registrarAvionResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </types>
+
+    <message name="RegistrarAvionRequest">
+        <part name="parameters" element="tns:registrarAvion"/>
+    </message>
+
+    <message name="RegistrarAvionResponse">
+        <part name="parameters" element="tns:registrarAvionResponse"/>
+    </message>
+
+    <portType name="AvionServicePortType">
+        <operation name="registrarAvion">
+            <input message="tns:RegistrarAvionRequest"/>
+            <output message="tns:RegistrarAvionResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="AvionServiceBinding" type="tns:AvionServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="registrarAvion">
+            <soap:operation soapAction="registrarAvion"/>
+            <input><soap:body use="literal"/></input>
+            <output><soap:body use="literal"/></output>
+        </operation>
+    </binding>
+
+    <service name="AvionService">
+        <port name="AvionServicePort" binding="tns:AvionServiceBinding">
+            <soap:address location="http://localhost:8080/AvionService"/>
+        </port>
+    </service>
+</definitions>
