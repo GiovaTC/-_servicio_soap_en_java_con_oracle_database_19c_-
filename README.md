@@ -5,6 +5,8 @@
 
 <img width="2557" height="1078" alt="image" src="https://github.com/user-attachments/assets/2451ad88-0da4-47dc-bbff-79bdb5fb7723" />    
 
+<img width="2556" height="1079" alt="image" src="https://github.com/user-attachments/assets/22a306c0-b446-4f5d-b1d2-190c0f937e54" />    
+
 A continuación se presenta una **solución completa, profesional y ejecutable** de un **servicio SOAP en Java**, desarrollada en **IntelliJ IDEA**, que cumple con los siguientes objetivos:
 
 - Exponer información de un avión mediante **SOAP (JAX-WS)** .
