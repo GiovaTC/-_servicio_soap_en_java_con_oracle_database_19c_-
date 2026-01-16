@@ -1,7 +1,9 @@
 # -_servicio_soap_en_java_con_oracle_database_19c_- :. .
 # Servicio SOAP en Java con Oracle Database 19c .
 
-<img width="1070" height="1000" alt="image" src="https://github.com/user-attachments/assets/7f5b134b-0d83-4c43-8a3a-41bbecfce800" />  
+<img width="1070" height="1000" alt="image" src="https://github.com/user-attachments/assets/7f5b134b-0d83-4c43-8a3a-41bbecfce800" />
+
+<img width="2557" height="1078" alt="image" src="https://github.com/user-attachments/assets/2451ad88-0da4-47dc-bbff-79bdb5fb7723" />    
 
 A continuación se presenta una **solución completa, profesional y ejecutable** de un **servicio SOAP en Java**, desarrollada en **IntelliJ IDEA**, que cumple con los siguientes objetivos:
 
