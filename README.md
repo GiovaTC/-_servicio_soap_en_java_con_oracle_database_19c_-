@@ -5,7 +5,9 @@
 
 <img width="2557" height="1078" alt="image" src="https://github.com/user-attachments/assets/2451ad88-0da4-47dc-bbff-79bdb5fb7723" />    
 
-<img width="2556" height="1079" alt="image" src="https://github.com/user-attachments/assets/22a306c0-b446-4f5d-b1d2-190c0f937e54" />    
+<img width="2556" height="1079" alt="image" src="https://github.com/user-attachments/assets/22a306c0-b446-4f5d-b1d2-190c0f937e54" />  
+
+<img width="2551" height="1041" alt="image" src="https://github.com/user-attachments/assets/021cac7d-9d38-46c1-80e8-e2e40ca53133" />    
 
 A continuación se presenta una **solución completa, profesional y ejecutable** de un **servicio SOAP en Java**, desarrollada en **IntelliJ IDEA**, que cumple con los siguientes objetivos:
 
