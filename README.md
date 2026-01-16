@@ -303,16 +303,14 @@ http://localhost:8080/AvionService
 9.2 Request de ejemplo
 xml
 
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns:avi="http://avion/">
-   <soapenv:Header/>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
    <soapenv:Body>
-      <avi:registrarAvion>
+      <registrarAvion>
          <modelo>Boeing 737</modelo>
          <fabricante>Boeing</fabricante>
          <capacidad>180</capacidad>
          <autonomia>5600</autonomia>
-      </avi:registrarAvion>
+      </registrarAvion>
    </soapenv:Body>
 </soapenv:Envelope>
 9.3 Respuesta esperada
