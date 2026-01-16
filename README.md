@@ -298,7 +298,8 @@ File → New SOAP Project
 
 WSDL URL:
 http://localhost:8080/AvionService?wsdl
-
+ENDPOINT SOAPUI:
+http://localhost:8080/AvionService        
 9.2 Request de ejemplo
 xml
 
