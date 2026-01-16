@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="62196751-38a1-4f8b-9daa-0ab121342546" activeEnvironment="Default" name="AvionService" resourceRoot="" soapui-version="5.9.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7cd87742-63c1-496e-9298-0eb965cf700d" wsaVersion="NONE" name="AvionServiceBinding" type="wsdl" bindingName="{http://avion/}AvionServiceBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/USUARIO/OneDrive%20-%20Politécnico%20Grancolombiano/Documentos/AvionService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\USUARIO\OneDrive%20-%20Politécnico%20Grancolombiano\Documentos\AvionService.wsdl"><con:part><con:url>file:\C:\Users\USUARIO\OneDrive%20-%20Politécnico%20Grancolombiano\Documentos\AvionService.wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="http://avion/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://avion/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema targetNamespace="http://avion/">
+      <xsd:element name="registrarAvion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="modelo" type="xsd:string"/>
+            <xsd:element name="fabricante" type="xsd:string"/>
+            <xsd:element name="capacidad" type="xsd:int"/>
+            <xsd:element name="autonomia" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registrarAvionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="return" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="RegistrarAvionRequest">
+    <part name="parameters" element="tns:registrarAvion"/>
+  </message>
+  <message name="RegistrarAvionResponse">
+    <part name="parameters" element="tns:registrarAvionResponse"/>
+  </message>
+  <portType name="AvionServicePortType">
+    <operation name="registrarAvion">
+      <input message="tns:RegistrarAvionRequest"/>
+      <output message="tns:RegistrarAvionResponse"/>
+    </operation>
+  </portType>
+  <binding name="AvionServiceBinding" type="tns:AvionServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="registrarAvion">
+      <soap:operation soapAction="registrarAvion"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="AvionService">
+    <port name="AvionServicePort" binding="tns:AvionServiceBinding">
+      <soap:address location="http://localhost:8080/AvionService"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/AvionService</con:endpoint></con:endpoints><con:operation id="a34b39b7-189f-4ba3-b33e-68dc04f7ba19" isOneWay="false" action="registrarAvion" name="registrarAvion" bindingOperationName="registrarAvion" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="febf4936-b526-4491-9b3a-f2a1dec516fa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/AvionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <registrarAvion>
+         <modelo>Boeing 737</modelo>
+         <fabricante>Boeing</fabricante>
+         <capacidad>180</capacidad>
+         <autonomia>5600</autonomia>
+      </registrarAvion>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="registrarAvion"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
